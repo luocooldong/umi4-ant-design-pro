@@ -354,7 +354,7 @@ export default defineConfig({
   mfsu: {
   },
   chainWebpack(memo: any) {
-    memo.resolve.alias.set('jxt-components', path.resolve(__dirname, "../src/jxt-components"));
+    memo.resolve.alias.set('jxt-components', path.resolve(__dirname, "../jxt-components"));
     memo.plugin('monaco-editor').use(MonacoEditorWebpackPlugin, []);
     return memo;
   },
