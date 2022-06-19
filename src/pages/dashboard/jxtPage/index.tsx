@@ -29,12 +29,12 @@ const JxtTest = () => {
             </Row>
             <Row gutter={10}>
                 <Form form={form} autoComplete='off' colon={false} layout='inline' style={{ width: '100%' }} onFinish={e => {}}>
-                    <Col span={3}>
+                    <Col span={4}>
                         <Item name='name'>
                             <JxtSearchSelect api='/api/combobox/getCarList' placeholder='车牌号' key='name' />
                         </Item>
                     </Col>
-                    <Col span={3}>
+                    <Col span={4}>
                         <Item name='carType'>
                             <JxtSelect key='carType' optionDisable={3} list={carTypeList} placeholder='培训车型' />
                         </Item>
