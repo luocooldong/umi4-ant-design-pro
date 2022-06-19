@@ -24,7 +24,9 @@ const JxtTest = () => {
 
   return (
     <div>
-      <div style={{ marginRight: 30 }}>test-lib</div>
+      <Row>
+        <div style={{ marginBottom: 30 }}>test-lib</div>
+      </Row>
       <Row gutter={10}>
         <Form
           form={form}
