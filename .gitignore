@@ -4,3 +4,4 @@ node_modules
 .umi
 .umi-production
 jxt-components
+jxt-components-test
