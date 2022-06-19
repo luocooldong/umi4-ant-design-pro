@@ -1,11 +1,11 @@
-import useMergeValue from 'use-merge-value'
-import qs from 'qs'
-import 'isomorphic-fetch'
+// import useMergeValue from 'use-merge-value'
+// import qs from 'qs'
+// import 'isomorphic-fetch'
 import { Row, Col } from 'antd'
 
 import { JxtSelect } from 'jxt-components'
 
-console.log('JxtPage', qs)
+// console.log('JxtPage', qs)
 
 const JxtTest = () => {
   return (

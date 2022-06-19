@@ -351,7 +351,8 @@ export default defineConfig({
   },
   // Fast Refresh 热更新
   fastRefresh: true,
-  mfsu: {},
+  mfsu: {
+  },
   chainWebpack(memo: any) {
     memo.resolve.alias.set('jxt-components', path.resolve(__dirname, "../src/jxt-components"));
     memo.plugin('monaco-editor').use(MonacoEditorWebpackPlugin, []);
