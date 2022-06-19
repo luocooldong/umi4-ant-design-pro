@@ -3,7 +3,7 @@
 // import 'isomorphic-fetch'
 import { Row, Col } from 'antd'
 
-import { JxtSelect } from 'jxt-components'
+import { JxtSelect, JxtSearchSelect } from 'jxt-components'
 
 // console.log('JxtPage', qs)
 
@@ -11,7 +11,8 @@ const JxtTest = () => {
   return (
     <div>
       <span style={{ marginRight: 30 }}>test-lib</span>
-      <JxtSelect style={{ with: '100%' }} />
+      <JxtSelect/>
+      <JxtSearchSelect />
     </div>
   )
 }
