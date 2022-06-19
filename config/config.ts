@@ -3,6 +3,7 @@ import MonacoEditorWebpackPlugin from 'monaco-editor-webpack-plugin';
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
+import path from  'path'
 const { REACT_APP_ENV } = process.env;
 export default defineConfig({
   hash: true,
@@ -78,7 +79,13 @@ export default defineConfig({
       routes: [
         {
           path: '/dashboard',
-          redirect: '/dashboard/analysis',
+          redirect: '/dashboard/jxtPage',
+        },
+        {
+          name: 'jxtPage',
+          icon: 'smile',
+          path: '/dashboard/jxtPage',
+          component: './dashboard/jxtPage',
         },
         {
           name: 'analysis',
@@ -322,7 +329,7 @@ export default defineConfig({
     },
     {
       path: '/',
-      redirect: '/dashboard/analysis',
+      redirect: '/dashboard',
     },
     {
       component: '404',
@@ -346,6 +353,7 @@ export default defineConfig({
   fastRefresh: true,
   mfsu: {},
   chainWebpack(memo: any) {
+    memo.resolve.alias.set('jxt-components', path.resolve(__dirname, "../src/jxt-components"));
     memo.plugin('monaco-editor').use(MonacoEditorWebpackPlugin, []);
     return memo;
   },
