@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { Row, Col, Form } from 'antd'
 import { ComboBox, getComboBox } from '../../../services/combobox'
 
-import { JxtSelect, JxtSearchSelect } from 'jxt-components'
+import { JxtSelect, JxtSearchSelect } from 'jxt-components-test'
 
 // console.log('JxtPage', qs)
 const { Item } = Form
