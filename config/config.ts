@@ -4,7 +4,8 @@ import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import path from  'path'
-const { REACT_APP_ENV } = process.env;
+const { REACT_APP_ENV, NODE_ENV } = process.env;
+console.log('process.env.NODE_ENV', process.env.NODE_ENV)
 export default defineConfig({
   hash: true,
   model: {},
@@ -354,7 +355,10 @@ export default defineConfig({
   mfsu: {
   },
   chainWebpack(memo: any) {
-    // memo.resolve.alias.set('jxt-components-test', path.resolve(__dirname, "../jxt-components-test/src"));
+    if (NODE_ENV === "development") {
+      // 调试本地组件库
+      // memo.resolve.alias.set('jxt-components-test', path.resolve(__dirname, "../jxt-components-test/src"));
+    }
     memo.plugin('monaco-editor').use(MonacoEditorWebpackPlugin, []);
     return memo;
   },
